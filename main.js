@@ -26,7 +26,21 @@ const fruit = ['apple', 'orange', 'banana', ];
 // console.log('number of fruit: ', fruit.length);
 // console.log('number of fruit: ', fruit[3]);
 // We'd have to be specific if we want to have an empty slot
-const heroesA = ['spider-man', 'super-man', 'invinsible', undefined];
-const heroesB = ['spider-man', 'super-man', 'invinsible', /* nothing */,];
-console.log('number of heroes a: ', heroesA.length);
-console.log('number of heroes b: ', heroesB.length);
+// const heroesA = ['spider-man', 'super-man', 'invinsible', undefined];
+// const heroesB = ['spider-man', 'super-man', 'invinsible', /* nothing */,];
+// console.log('number of heroes a: ', heroesA.length);
+// console.log('number of heroes b: ', heroesB.length);
+
+const words = 'Mr Bluefoo has a blue house and a bluefoo carfoo.'
+const getReplacement = (match) => {
+    const lowerCaseMatch = match.toLowerCase();
+    if (lowerCaseMatch === 'bluefoo')
+        return 'blue foo';
+    if (lowerCaseMatch === 'carfoo')
+        return 'car foo';
+};
+const result = words.replace(/bluefoo|carfoo/gi, getReplacement)
+console.log(result);
+
+
+
